@@ -1,30 +1,30 @@
-// YouTube Analytics Code
+// YouTube Inspector Script
 
-// Variables to hold the data
-let views = 0;
-let subscribers = 0;
-let performanceMetrics = {};
+function analyzeYouTubeChannel() {
+    // Fetching view count
+    const viewCountElement = document.querySelector('meta[itemprop="interactionCount"]').getAttribute('content');
+    const viewCount = parseInt(viewCountElement) || 0;
 
-// Function to capture views
-function captureViews(newViews) {
-    views += newViews;
-    calculatePerformanceMetrics();
+    // Fetching subscriber count
+    const subscriberCountElement = document.querySelector('#subscriber-count');
+    const subscriberCount = parseInt(subscriberCountElement.innerText.replace(/[^\d]/g, '')) || 0;
+
+    // Fetching channel performance metrics
+    const performanceMetrics = fetchPerformanceMetrics();
+
+    // Displaying the results
+    console.log(`View Count: ${viewCount}`);
+    console.log(`Subscriber Count: ${subscriberCount}`);
+    console.log(`Performance Metrics: ${JSON.stringify(performanceMetrics)}`);
 }
 
-// Function to capture subscribers
-function captureSubscribers(newSubscribers) {
-    subscribers += newSubscribers;
-    calculatePerformanceMetrics();
+function fetchPerformanceMetrics() {
+    // Assume we fetch additional metrics here
+    return {
+        averageViewsPerVideo: 10000,
+        engagementRate: '5%'
+    };
 }
 
-// Function to calculate performance metrics
-function calculatePerformanceMetrics() {
-    performanceMetrics.viewToSubscriberRatio = views > 0 ? (subscribers / views) * 100 : 0;
-    // Additional metrics can be calculated here
-}
-
-// Example usage
-// captureViews(150);
-// captureSubscribers(5);
-
-console.log(performanceMetrics);
+// Run the analyzer
+analyzeYouTubeChannel();
