@@ -1,30 +1,25 @@
-// YouTube Inspector Script
+// YouTube AI Inspector Code
 
-function analyzeYouTubeChannel() {
-    // Fetching view count
-    const viewCountElement = document.querySelector('meta[itemprop="interactionCount"]').getAttribute('content');
-    const viewCount = parseInt(viewCountElement) || 0;
-
-    // Fetching subscriber count
-    const subscriberCountElement = document.querySelector('#subscriber-count');
-    const subscriberCount = parseInt(subscriberCountElement.innerText.replace(/[^\d]/g, '')) || 0;
-
-    // Fetching channel performance metrics
-    const performanceMetrics = fetchPerformanceMetrics();
-
-    // Displaying the results
-    console.log(`View Count: ${viewCount}`);
-    console.log(`Subscriber Count: ${subscriberCount}`);
-    console.log(`Performance Metrics: ${JSON.stringify(performanceMetrics)}`);
+function sayiyaCevir(input) {
+    // Function implementation
 }
 
-function fetchPerformanceMetrics() {
-    // Assume we fetch additional metrics here
-    return {
-        averageViewsPerVideo: 10000,
-        engagementRate: '5%'
-    };
+function aboneBul() {
+    // Function implementation
 }
 
-// Run the analyzer
-analyzeYouTubeChannel();
+function izlenmeleriTopla() {
+    // Function implementation
+}
+
+function ortalama() {
+    // Function implementation
+}
+
+function performans() {
+    // Function implementation
+}
+
+function panelGuncelle() {
+    // Function implementation
+}
