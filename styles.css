@@ -1,0 +1,30 @@
+.extension-panel {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.extension-panel h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.extension-panel p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.extension-panel button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 5px 2px;
+    cursor: pointer;
+}
